@@ -9,7 +9,6 @@ using PubgStat.view_model;
 using PubgStat.page;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using PubgStat.page;
 
 namespace PubgStat.page {
     [XamlCompilation(XamlCompilationOptions.Compile)]

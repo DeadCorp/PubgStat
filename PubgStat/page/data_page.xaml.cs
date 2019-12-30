@@ -16,8 +16,12 @@ namespace PubgStat.page {
       
         public  data_page() {
             InitializeComponent();
-           
-            
+
+            this.BindingContext = new data_page_view_model {
+                rank_points = "rank",
+                swim_dist = "swim"
+
+            };
         }
         
     }
