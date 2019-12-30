@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PubgStat.page.data_page"
+             xmlns:model="clr-namespace:PubgStat.model"
+             xmlns:vm="clr-namespace:PubgStat.view_model"
+             >
+    
+    
+   <ContentPage.Content>
+       <ScrollView>
+            
+        <StackLayout Padding="10">
+            
+            <StackLayout Margin="0,5,5,5" >
+                <Label Text="Ranking" FontSize="16" FontAttributes="Bold"/>
+            </StackLayout>
+            
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Rank Points"/>
+                    <Label Text="{Binding rank_points}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Rounds Played"/>
+                    <Label Text="{Binding round_played}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Top 10"/>
+                    <Label Text="{Binding model:top_10}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Wins"/>
+                    <Label Text="{Binding model:wins}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+            <StackLayout Margin="0,5,5,5" >
+                <Label Text="Combat" FontSize="16" FontAttributes="Bold"/>
+            </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="K/D"/>
+                    <Label Text="{Binding model:k_d}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Kills"/>
+                    <Label Text="{Binding model:kills}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Avg damage"/>
+                    <Label Text="{Binding model:avg_damage}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Max kill streak"/>
+                    <Label Text="{Binding model:max_kill_streak}" Margin="25,0,0,0"/>
+                </StackLayout>
+            
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Headshots"/>
+                    <Label Text="{Binding model:headshots}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Longest Kill"/>
+                    <Label Text="{Binding model:longest_kill}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Round max kill"/>
+                    <Label Text="{Binding model:round_max_kill}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Vehicle destroys"/>
+                    <Label Text="{Binding model:vehicle_destroys}" Margin="25,0,0,0"/>
+                </StackLayout>
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Road kill"/>
+                    <Label Text="{Binding model:road_kill}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Team kill"/>
+                    <Label Text="{Binding model:team_kill}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                     <Label Text="Knocks"/>
+                     <Label Text="{Binding model:knocks}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+            <StackLayout Margin="0,5,5,5" >
+                <Label Text="Survive" FontSize="16" FontAttributes="Bold"/>
+            </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Heals"/>
+                    <Label Text="{Binding model:heals}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Boosts"/>
+                    <Label Text="{Binding model:boosts}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Most survival time"/>
+                    <Label Text="{Binding model:most_survivale_time}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Total survival time"/>
+                    <Label Text="{Binding model:total_survival_time}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                     <Label Text="Suicide"/>
+                     <Label Text="{Binding model:suicide}" Margin="25,0,0,0"/>
+                </StackLayout>
+            
+            <StackLayout Margin="0,5,5,5" >
+                <Label Text="Travel" FontSize="16" FontAttributes="Bold"/>
+            </StackLayout>
+            
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Walk distance"/>
+                    <Label Text="{Binding model:walk_dist}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Ride distance"/>
+                    <Label Text="{Binding model:ride_dist}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Swim distance"/>
+                    <Label Text="{Binding swim_dist}" Margin="25,0,0,0"/>
+                </StackLayout>
+
+         </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:views="clr-namespace:PubgStat.page"
+             x:Class="PubgStat.MainPage"
+             Visual="Material"
+             FlyoutBehavior="Disabled"
+             Title="PubgStat">
+    
+
+
+    <ShellItem>
+        <ShellContent Title="Search">
+            <views:search_page />
+        </ShellContent>
+
+        <ShellSection Title="Season">
+            <ShellContent Title="Solo" Route="season_solo" ContentTemplate="{DataTemplate views:data_page}">
+                
+                
+            </ShellContent>
+            <ShellContent Title="Duo" ContentTemplate="{DataTemplate views:data_page}">
+                
+            </ShellContent>
+            <ShellContent Title="Squad">
+                <views:search_page />
+            </ShellContent>
+            <ShellContent Title="Solo TPP" >
+                <views:search_page />
+            </ShellContent>
+            <ShellContent Title="Duo TPP">
+                <views:search_page />
+            </ShellContent>
+            <ShellContent Title="Squad TPP">
+                <views:search_page />
+            </ShellContent>
+        </ShellSection>
+
+        <ShellContent Title="LifeTime">
+            <views:search_page />
+        </ShellContent>
+        <ShellContent Title="About">
+            <views:search_page />
+        </ShellContent>
+    </ShellItem>
+
+    
+
+</Shell>
