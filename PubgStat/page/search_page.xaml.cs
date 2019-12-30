@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PubgNet;
-
 using PubgStat.view_model;
 using PubgStat.page;
 using Xamarin.Forms;
@@ -46,7 +45,7 @@ namespace PubgStat.page {
                     await DisplayAlert("Уведомление","Неверный  ник игрока","ОK");
                 var seasons = await client.GetSeasons();
                 string rank_pointss = "100",
-                    swim_distt = "200";
+                        swim_distt = "200";
                 this.BindingContext = new data_page_view_model {
                     rank_points = rank_pointss,
                     swim_dist = swim_distt
@@ -59,4 +58,4 @@ namespace PubgStat.page {
         }
 
     }
-}
+    }

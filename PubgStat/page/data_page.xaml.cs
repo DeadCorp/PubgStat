@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using PubgStat.view_model;
 using Xamarin.Forms;
-using PubgNet;
+
+
 using Xamarin.Forms.Xaml;
 
 namespace PubgStat.page {
