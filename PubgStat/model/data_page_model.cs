@@ -4,8 +4,8 @@ using System.Collections.ObjectModel;
 using System.Text;
 
 namespace PubgStat.model {
-    class data_page_model {
-        public string rank_points { get; set; }
+   public class data_page_model {
+        public string rank_points { get;  set; }
         public int round_played { get; set; }
         public int top_10 { get; set; }
         public int wins { get; set; }

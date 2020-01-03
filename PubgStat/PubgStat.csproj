@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -17,6 +17,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PubgNet\PubgNet.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="page\data_page_solo.xaml.cs">
+      <DependentUpon>data_page_solo.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

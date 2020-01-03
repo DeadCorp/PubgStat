@@ -12,9 +12,10 @@ using Xamarin.Forms.Xaml;
 namespace PubgStat.page {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class search_page : ContentPage {
-
         PubgNetClient client = new PubgNetClient(GetApi());
+        
         static string Name;
+        public static bool is_solo_fpp = false;
         public search_page() {
             InitializeComponent();
         }
@@ -22,12 +23,22 @@ namespace PubgStat.page {
 
         private async void search_button_Clicked(object sender,EventArgs e) {
             Name = entry_player_name.Text;
-            await take_data();
-            
-            
-            
-            await Shell.Current.GoToAsync("//season_solo");
+            data_page_view_model vm_s_f = new data_page_view_model {
+                rank_points = "10102342342",
+                swim_dist = "232424"
+            };
 
+
+
+            
+
+
+            //await take_data();
+
+
+
+            
+            
         }
 
         public static string GetApi() {
@@ -44,11 +55,10 @@ namespace PubgStat.page {
                 if(players == null)
                     await DisplayAlert("Уведомление","Неверный  ник игрока","ОK");
                 var seasons = await client.GetSeasons();
-                string rank_pointss = "100",
-                        swim_distt = "200";
+
                 this.BindingContext = new data_page_view_model {
-                    rank_points = rank_pointss,
-                    swim_dist = swim_distt
+                    rank_points = "10102342342",
+                    swim_dist = "232424"
 
                 };
 

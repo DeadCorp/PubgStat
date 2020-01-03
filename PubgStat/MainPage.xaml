@@ -8,22 +8,24 @@
              x:Class="PubgStat.MainPage"
              Visual="Material"
              FlyoutBehavior="Disabled"
-             Title="PubgStat">
+             Title="PubgStat"
+       xmlns:localv="clr-namespace:PubgStat">
     
 
 
     <ShellItem>
         <ShellContent Title="Search">
             <views:search_page />
+            
         </ShellContent>
 
         <ShellSection Title="Season">
-            <ShellContent Title="Solo" Route="season_solo" ContentTemplate="{DataTemplate views:data_page}">
-                
-                
+            <ShellContent Title="Solo" Route="season_solo" >
+
+                <views:data_page_solo />
             </ShellContent>
-            <ShellContent Title="Duo" ContentTemplate="{DataTemplate views:data_page}">
-                
+            <ShellContent Title="Duo" Route="season_duo" >
+                <views:data_page />
             </ShellContent>
             <ShellContent Title="Squad">
                 <views:search_page />

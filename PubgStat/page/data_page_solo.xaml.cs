@@ -11,10 +11,10 @@ using Xamarin.Forms.Xaml;
 
 namespace PubgStat.page {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class data_page : ContentPage {
+    public partial class data_page_solo : ContentPage {
 
         
-        public  data_page() {
+        public  data_page_solo() {
             InitializeComponent();
 
 
@@ -34,11 +34,10 @@ namespace PubgStat.page {
 
             bind(data);
         }
-        private  static void bind(data_page_view_model view) {
-            
-           
-                Shell.Current.BindingContext = view;
-            
+        private async static void bind(data_page_view_model view) {
+            await Shell.Current.GoToAsync("//season_duo");
+           Shell.Current.BindingContext = view;
+
         }
         public static void bind_d() {
 
