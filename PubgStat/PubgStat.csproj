@@ -11,6 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="season_id.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="season_id.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
@@ -20,7 +29,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="page\data_page_solo.xaml.cs">
+    <Compile Update="page\season_stat_page\data_page_squad_tpp.xaml.cs">
+      <DependentUpon>data_page_squad_tpp.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="page\season_stat_page\data_page_duo_tpp.xaml.cs">
+      <DependentUpon>data_page_duo_tpp.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="page\season_stat_page\data_page_solo_tpp.xaml.cs">
+      <DependentUpon>data_page_solo_tpp.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="page\season_stat_page\data_page_squad.xaml.cs">
+      <DependentUpon>data_page_squad.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="page\season_stat_page\data_page_duo.xaml.cs">
+      <DependentUpon>data_page_duo.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="page\season_stat_page\data_page_solo.xaml.cs">
       <DependentUpon>data_page_solo.xaml</DependentUpon>
     </Compile>
   </ItemGroup>

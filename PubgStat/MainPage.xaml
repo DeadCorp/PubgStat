@@ -5,50 +5,66 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:views="clr-namespace:PubgStat.page"
+             xmlns:views_season="clr-namespace:PubgStat.page.season_stat_page"
              x:Class="PubgStat.MainPage"
              Visual="Material"
              FlyoutBehavior="Disabled"
              Title="PubgStat"
-       xmlns:localv="clr-namespace:PubgStat">
+             xmlns:localv="clr-namespace:PubgStat"
+             BackgroundColor="#455A64"
+             ForegroundColor="White"
+             TitleColor="White"
+             DisabledColor="#B4FFFFFF"
+             UnselectedColor="#95FFFFFF">
+       
     
-
-
     <ShellItem>
-        <ShellContent Title="Search">
-            <views:search_page />
-            
-        </ShellContent>
 
-        <ShellSection Title="Season">
-            <ShellContent Title="Solo" Route="season_solo" >
 
-                <views:data_page_solo />
+        <Tab Title="Search">
+            <ShellContent >
+
+                <views:search_page />
+
+            </ShellContent>
+        </Tab>
+        <Tab Title="Seasons" Shell.NavBarIsVisible="False"  >
+
+            <ShellContent Title="Solo" Route="season_solo"  >
+
+                <views_season:data_page_solo/>
             </ShellContent>
             <ShellContent Title="Duo" Route="season_duo" >
-                <views:data_page />
+                <views_season:data_page_duo/>
             </ShellContent>
             <ShellContent Title="Squad">
-                <views:search_page />
+                <views_season:data_page_squad/>
             </ShellContent>
             <ShellContent Title="Solo TPP" >
-                <views:search_page />
+                <views_season:data_page_solo_tpp/>
             </ShellContent>
             <ShellContent Title="Duo TPP">
-                <views:search_page />
+                <views_season:data_page_duo_tpp/>
             </ShellContent>
             <ShellContent Title="Squad TPP">
+                <views_season:data_page_squad_tpp/>
+            </ShellContent>
+
+
+        </Tab>
+
+        <Tab Title="LifeTime">
+            <ShellContent >
                 <views:search_page />
             </ShellContent>
-        </ShellSection>
+        </Tab>
 
-        <ShellContent Title="LifeTime">
-            <views:search_page />
-        </ShellContent>
-        <ShellContent Title="About">
-            <views:search_page />
-        </ShellContent>
+        <Tab Title="About">
+            <ShellContent >
+                <views:search_page />
+            </ShellContent>
+        </Tab>
     </ShellItem>
 
-    
 
 </Shell>

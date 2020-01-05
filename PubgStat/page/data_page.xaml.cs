@@ -23,25 +23,9 @@ namespace PubgStat.page {
 
         private void searchx_button_Clicked(object sender,EventArgs e) {
 
-            this.BindingContext = new data_page_view_model {
-                rank_points = "10102342342",
-                swim_dist = "232424"
-
-            };
-
-        }
-        public static  void bind_s(data_page_view_model data) {
-
-            bind(data);
-        }
-        private  static void bind(data_page_view_model view) {
-            
            
-                Shell.Current.BindingContext = view;
-            
-        }
-        public static void bind_d() {
 
         }
+        
     }
 }
