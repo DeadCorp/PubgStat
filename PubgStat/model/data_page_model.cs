@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PubgStat.model {
    public class data_page_model {
+        public Image image { get; set; }
         public double rank_points { get;  set; }
+        public double best_rank_points { get; set; }        
         public int revives { get; set; }
         public int round_played { get; set; }
         public int assists { get; set; }

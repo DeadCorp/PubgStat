@@ -6,8 +6,7 @@
              mc:Ignorable="d"
              x:Class="PubgStat.page.season_stat_page.data_page_solo"
              xmlns:page="clr-namespace:PubgStat.page"
-             xmlns:vm="clr-namespace:PubgStat.view_model"
-              Appearing="ContentPage_Appearing">
+             xmlns:vm="clr-namespace:PubgStat.view_model">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -153,10 +152,8 @@
 
 
         </Frame>
-        <Frame Grid.Column="1" Grid.Row="0" Margin="2,10,15,0" BackgroundColor="Coral">
-            <BoxView >
-
-            </BoxView>
+        <Frame  Grid.Column="1" Grid.Row="0" Margin="2,10,15,0" BackgroundColor="Coral">
+            <Button ImageSource="{Binding image.Source}"  BackgroundColor="Coral"></Button>
         </Frame>
         <Frame Grid.Column="1" Grid.Row="1" Padding="0" Margin="2,0,15,5" Grid.RowSpan="2" BackgroundColor="Coral">
 

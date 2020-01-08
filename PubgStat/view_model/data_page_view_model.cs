@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
+using PubgStat;
 using PubgStat.model;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace PubgStat.view_model {
     public class data_page_view_model : base_view_model {
@@ -16,17 +20,90 @@ namespace PubgStat.view_model {
                 bild = new data_page_model();
                 
             }
+        public double best_rank_points {
+            get { return bild.best_rank_points; }
+            set {
+                if(bild.best_rank_points != value) {
+                    bild.best_rank_points = value;
+                    NotyfyPropertyChanged(nameof(best_rank_points));
+
+                }
+            }
+        }
 
         public double rank_points {
             get { return bild.rank_points; }
             set {
                 if(bild.rank_points != value) {
                     bild.rank_points = value;
+
                     NotyfyPropertyChanged(nameof(rank_points));
 
                 }
             }
         }
+        public Image image {
+            get { return bild.image; }
+            set {
+                if(bild.image != value) {
+
+                    bild.image = value;
+                    
+                    NotyfyPropertyChanged(nameof(image));
+
+                }
+            }
+        }
+
+        private Image get_rank_pics(double value) {
+
+            Image temp = new Image();
+
+            //UNKNOWN
+            if(value <= 1) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Unknown.png"); }
+            //BEGINNER
+            if(Enumerable.Range(1,199)  .Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Beginner_01.png"); }
+            if(Enumerable.Range(200,399).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Beginner_02.png"); }
+            if(Enumerable.Range(400,599).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Beginner_03.png"); }
+            if(Enumerable.Range(600,799).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Beginner_04.png"); }
+            if(Enumerable.Range(800,999).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Beginner_05.png"); }
+            //NOVICE
+            if(Enumerable.Range(1000,1199).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Novice_01.png"); }
+            if(Enumerable.Range(1200,1399).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Novice_02.png"); }
+            if(Enumerable.Range(1400,1599).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Novice_03.png"); }
+            if(Enumerable.Range(1600,1799).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Novice_04.png"); }
+            if(Enumerable.Range(1800,1999).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Novice_05.png"); }
+            //EXPERIENCED
+            if(Enumerable.Range(2000,2199).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Experienced_01.png"); }
+            if(Enumerable.Range(2200,2399).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Experienced_02.png"); }
+            if(Enumerable.Range(2400,2599).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Experienced_03.png"); }
+            if(Enumerable.Range(2600,2799).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Experienced_04.png"); }
+            if(Enumerable.Range(2800,2999).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Experienced_05.png"); }
+            //SKILLED
+            if(Enumerable.Range(3000,3199).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Skilled_01.png"); }
+            if(Enumerable.Range(3200,3399).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Skilled_02.png"); }
+            if(Enumerable.Range(3400,3599).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Skilled_03.png"); }
+            if(Enumerable.Range(3600,3799).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Skilled_04.png"); }
+            if(Enumerable.Range(3800,3999).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Skilled_05.png"); }
+            //SPECIALIST
+            if(Enumerable.Range(4000,4199).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Specialist_01.png"); }
+            if(Enumerable.Range(4200,4399).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Specialist_02.png"); }
+            if(Enumerable.Range(4400,4599).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Specialist_03.png"); }
+            if(Enumerable.Range(4600,4799).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Specialist_04.png"); }
+            if(Enumerable.Range(4800,4999).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Specialist_05.png"); }
+            //EXPERT
+            if(Enumerable.Range(5000,5999).Contains((int)value)) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Expert.png"); }
+            //SURVIVOR
+            if(value > 6000) { temp.Source = ImageSource.FromResource("PubgStat.Ranks.Survivor.png"); }
+
+
+
+
+            return temp;
+
+
+        }
+
         public int assists {
             get { return bild.assists; }
             set {
@@ -90,7 +167,7 @@ namespace PubgStat.view_model {
         public int wins {
             get { return bild.wins; }
             set {
-                if(bild.wins != value) {
+                 if(bild.wins != value) {
                     bild.wins = value;
                     NotyfyPropertyChanged(nameof(wins));
 
@@ -101,9 +178,14 @@ namespace PubgStat.view_model {
             get { return bild.k_d; }
             set {
                 if(bild.k_d != value) {
-                    bild.k_d = value;
-                    NotyfyPropertyChanged(nameof(k_d));
-
+                    if(double.IsNaN(value)) {
+                        bild.k_d = 0;
+                        NotyfyPropertyChanged(nameof(k_d));
+                    }
+                    else {
+                        bild.k_d = value;
+                        NotyfyPropertyChanged(nameof(k_d));
+                    }
                 }
             }
         }
@@ -121,11 +203,16 @@ namespace PubgStat.view_model {
         public double avg_damage {
             get { return bild.avg_damage; }
             set {
-                if(bild.avg_damage != value) {
-                    bild.avg_damage = value;
-                    NotyfyPropertyChanged(nameof(avg_damage));
-
-                }
+                if(bild.avg_damage != value ) {
+                    if (double.IsNaN(value)) {
+                        bild.avg_damage = 0;
+                        NotyfyPropertyChanged(nameof(avg_damage));
+                    }
+                    else {
+                        bild.avg_damage = value;
+                        NotyfyPropertyChanged(nameof(avg_damage));
+                    }
+                }                
             }
         }
 

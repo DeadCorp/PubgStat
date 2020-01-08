@@ -11,11 +11,83 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="season_id.txt" />
+    <None Remove="Ranks\Beginner_01.png" />
+    <None Remove="Ranks\Beginner_02.png" />
+    <None Remove="Ranks\Beginner_03.png" />
+    <None Remove="Ranks\Beginner_04.png" />
+    <None Remove="Ranks\Beginner_05.png" />
+    <None Remove="Ranks\Experienced_01.png" />
+    <None Remove="Ranks\Experienced_02.png" />
+    <None Remove="Ranks\Experienced_03.png" />
+    <None Remove="Ranks\Experienced_04.png" />
+    <None Remove="Ranks\Experienced_05.png" />
+    <None Remove="Ranks\Expert.png" />
+    <None Remove="Ranks\Lone_Survivor.png" />
+    <None Remove="Ranks\Novice_01.png" />
+    <None Remove="Ranks\Novice_02.png" />
+    <None Remove="Ranks\Novice_03.png" />
+    <None Remove="Ranks\Novice_04.png" />
+    <None Remove="Ranks\Novice_05.png" />
+    <None Remove="Ranks\Ribbon_Beginner.png" />
+    <None Remove="Ranks\Ribbon_Experienced.png" />
+    <None Remove="Ranks\Ribbon_Expert.png" />
+    <None Remove="Ranks\Ribbon_Lone_Survivor.png" />
+    <None Remove="Ranks\Ribbon_Novice.png" />
+    <None Remove="Ranks\Ribbon_Skilled.png" />
+    <None Remove="Ranks\Ribbon_Specialist.png" />
+    <None Remove="Ranks\Ribbon_Survivor.png" />
+    <None Remove="Ranks\Skilled_01.png" />
+    <None Remove="Ranks\Skilled_02.png" />
+    <None Remove="Ranks\Skilled_03.png" />
+    <None Remove="Ranks\Skilled_04.png" />
+    <None Remove="Ranks\Skilled_05.png" />
+    <None Remove="Ranks\Specialist_01.png" />
+    <None Remove="Ranks\Specialist_02.png" />
+    <None Remove="Ranks\Specialist_03.png" />
+    <None Remove="Ranks\Specialist_04.png" />
+    <None Remove="Ranks\Specialist_05.png" />
+    <None Remove="Ranks\Survivor.png" />
+    <None Remove="Ranks\Unknown.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="season_id.txt" />
+    <EmbeddedResource Include="Ranks\Beginner_01.png" />
+    <EmbeddedResource Include="Ranks\Beginner_02.png" />
+    <EmbeddedResource Include="Ranks\Beginner_03.png" />
+    <EmbeddedResource Include="Ranks\Beginner_04.png" />
+    <EmbeddedResource Include="Ranks\Beginner_05.png" />
+    <EmbeddedResource Include="Ranks\Experienced_01.png" />
+    <EmbeddedResource Include="Ranks\Experienced_02.png" />
+    <EmbeddedResource Include="Ranks\Experienced_03.png" />
+    <EmbeddedResource Include="Ranks\Experienced_04.png" />
+    <EmbeddedResource Include="Ranks\Experienced_05.png" />
+    <EmbeddedResource Include="Ranks\Expert.png" />
+    <EmbeddedResource Include="Ranks\Lone_Survivor.png" />
+    <EmbeddedResource Include="Ranks\Novice_01.png" />
+    <EmbeddedResource Include="Ranks\Novice_02.png" />
+    <EmbeddedResource Include="Ranks\Novice_03.png" />
+    <EmbeddedResource Include="Ranks\Novice_04.png" />
+    <EmbeddedResource Include="Ranks\Novice_05.png" />
+    <EmbeddedResource Include="Ranks\Ribbon_Beginner.png" />
+    <EmbeddedResource Include="Ranks\Ribbon_Experienced.png" />
+    <EmbeddedResource Include="Ranks\Ribbon_Expert.png" />
+    <EmbeddedResource Include="Ranks\Ribbon_Lone_Survivor.png" />
+    <EmbeddedResource Include="Ranks\Ribbon_Novice.png" />
+    <EmbeddedResource Include="Ranks\Ribbon_Skilled.png" />
+    <EmbeddedResource Include="Ranks\Ribbon_Specialist.png" />
+    <EmbeddedResource Include="Ranks\Ribbon_Survivor.png" />
+    <EmbeddedResource Include="Ranks\Skilled_01.png" />
+    <EmbeddedResource Include="Ranks\Skilled_02.png" />
+    <EmbeddedResource Include="Ranks\Skilled_03.png" />
+    <EmbeddedResource Include="Ranks\Skilled_04.png" />
+    <EmbeddedResource Include="Ranks\Skilled_05.png" />
+    <EmbeddedResource Include="Ranks\Specialist_01.png" />
+    <EmbeddedResource Include="Ranks\Specialist_02.png" />
+    <EmbeddedResource Include="Ranks\Specialist_03.png" />
+    <EmbeddedResource Include="Ranks\Specialist_04.png" />
+    <EmbeddedResource Include="Ranks\Specialist_05.png" />
+    <EmbeddedResource Include="Ranks\Survivor.png" />
+    <EmbeddedResource Include="Ranks\Unknown.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,7 +122,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="page\data_page.xaml">
+    <EmbeddedResource Update="page\about_page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="page\lifetime_stat_page\lifetime_page_duo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="page\lifetime_stat_page\lifetime_page_duo_tpp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="page\lifetime_stat_page\lifetime_page_solo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="page\lifetime_stat_page\lifetime_page_solo_tpp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="page\lifetime_stat_page\lifetime_page_squad.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="page\lifetime_stat_page\lifetime_page_squad_tpp.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="page\search_page.xaml">

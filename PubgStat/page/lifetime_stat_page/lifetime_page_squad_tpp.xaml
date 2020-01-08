@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PubgStat.page.lifetime_stat_page.lifetime_page_squad_tpp">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="a" TargetType="Label" >
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+                <Setter Property="FontSize" Value="Caption" />
+                <Setter Property="FontAttributes" Value="Italic" />
+            </Style>
+            <Style TargetType="Label">
+
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Caption" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid BackgroundColor="SandyBrown" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+            <ColumnDefinition Width="*" />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="10,10,0,0" BackgroundColor="Coral">
+
+            <ScrollView>
+
+
+                <StackLayout Padding="5,0,5,5" >
+
+                    <StackLayout Margin="0,5,5,5" >
+                        <Label Text="Ranking" FontSize="16" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+
+                    
+
+                    <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                        <Label Text="Rounds Played"/>
+                        <Label Text="{Binding round_played}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                        <Label Text="Top 10"/>
+                        <Label Text="{Binding top_10}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                        <Label Text="Wins"/>
+                        <Label Text="{Binding wins}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                    </StackLayout>
+
+
+
+
+
+
+                </StackLayout>
+            </ScrollView>
+
+
+        </Frame>
+        <Frame Grid.Column="0" Grid.Row="1" Padding="0" Margin="10,0,0,0" BackgroundColor="Coral">
+
+
+
+
+            <StackLayout Padding="5,0,5,5" >
+                <StackLayout Margin="0,5,5,5" >
+                    <Label Text="Survive" FontSize="16" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Heals" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding heals}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Revives teammate" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding revives}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Boosts" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding boosts}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Most survival time, m" Margin="-3,0,0,0" />
+                    <Label Text="{Binding most_survival_time}"  Style="{StaticResource a}" />
+                </StackLayout>
+
+
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Total survival time, m" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding total_survival_time}" Margin="-3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Suicide" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding suicide}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+            </StackLayout>
+
+
+
+        </Frame>
+        <Frame Grid.Column="0" Grid.Row="2" Padding="0" Margin="10,0,0,5" BackgroundColor="Coral">
+
+            <ScrollView>
+
+
+                <StackLayout Padding="5,0,5,5"  >
+                    <StackLayout Margin="0,5,5,5" >
+                        <Label Text="Travel" FontSize="16" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                        <Label Text="Walk distance, km"/>
+                        <Label Text="{Binding walk_dist}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                        <Label Text="Ride distance, km"/>
+                        <Label Text="{Binding ride_dist}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                        <Label Text="Swim distance, km"/>
+                        <Label Text="{Binding swim_dist}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+
+        </Frame>
+
+        <Frame Grid.Column="1" Grid.Row="0" Padding="0" Margin="2,10,15,5" Grid.RowSpan="3" BackgroundColor="Coral">
+
+
+            <StackLayout Padding="10" >
+                <StackLayout Margin="0,5,5,5" >
+                    <Label Text="Combat" FontSize="16" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="K/D" Margin="-3,0,0,0" />
+                    <Label Text="{Binding k_d}" Margin="3,0,0,0" Style="{StaticResource a}" />
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Kills" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding kills}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Assists" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding assists}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Avg damage" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding avg_damage}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Max kill streak" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding max_kill_streak}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Headshots" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding headshots}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Longest Kill, m" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding longest_kill}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Round max kill" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding round_max_kill}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Vehicle destroys" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding vehicle_destroys}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Road kill" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding road_kill}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Team kill" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding team_kill}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Knocks" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding knocks}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+                <StackLayout Margin="5,0,0,0"  Orientation="Horizontal" >
+                    <Label Text="Weapons Acquired" Margin="-3,0,0,0"/>
+                    <Label Text="{Binding weaponsAcquired}" Margin="3,0,0,0" Style="{StaticResource a}"/>
+                </StackLayout>
+
+
+
+            </StackLayout>
+
+        </Frame>
+
+
+
+
+
+    </Grid>
+</ContentPage>

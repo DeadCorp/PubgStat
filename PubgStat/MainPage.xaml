@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:views="clr-namespace:PubgStat.page"
-             xmlns:views_season="clr-namespace:PubgStat.page.season_stat_page"
+             xmlns:views_season="clr-namespace:PubgStat.page.season_stat_page"       
+             xmlns:views_life="clr-namespace:PubgStat.page.lifetime_stat_page"
              x:Class="PubgStat.MainPage"
              Visual="Material"
              FlyoutBehavior="Disabled"
@@ -53,15 +54,32 @@
 
         </Tab>
 
-        <Tab Title="LifeTime">
-            <ShellContent >
-                <views:search_page />
+        <Tab Title="LifeTime" Shell.NavBarIsVisible="False">
+            <ShellContent Title="Life Solo" >
+
+                <views_life:lifetime_page_solo/>
             </ShellContent>
+            <ShellContent Title="Life Duo"  >
+                <views_life:lifetime_page_duo/>
+            </ShellContent>
+            <ShellContent Title="Life Squad">
+                <views_life:lifetime_page_squad/>
+            </ShellContent>
+            <ShellContent Title="Life Solo TPP" >
+                <views_life:lifetime_page_solo_tpp/>
+            </ShellContent>
+            <ShellContent Title="Life Duo TPP">
+                <views_life:lifetime_page_duo_tpp/>
+            </ShellContent>
+            <ShellContent Title="Life Squad TPP">
+                <views_life:lifetime_page_squad_tpp/>
+            </ShellContent>
+
         </Tab>
 
         <Tab Title="About">
             <ShellContent >
-                <views:search_page />
+                <views:about_page />
             </ShellContent>
         </Tab>
     </ShellItem>
