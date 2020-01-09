@@ -4,12 +4,34 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="PubgStat.page.about_page">
-    <ContentPage.Content>
-        <StackLayout Margin="20">
-            <Label Text="Тут буде шото цікаве про розробника, вікористані технології і якись мемчик" 
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+             x:Class="PubgStat.page.about_page"
+             xmlns:local="clr-namespace:PubgStat;assembly=PubgStat"
+             Title="About"
+             
+             BackgroundImageSource="{local:ImageResource PubgStat.images.MapSelection.Erangel.png}"
+             
+             >
+
+
+    
+
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="About" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="20" TextColor="White" FontAttributes="Bold" />
+            <Image  Source="{local:ImageResource PubgStat.images.Icons.Killfeed.Zombie_Punch.png}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
         </StackLayout>
-    </ContentPage.Content>
+    </Shell.TitleView>
+
+
+
+    <StackLayout Margin="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        
+            
+                <Button  ImageSource="{local:ImageResource PubgStat.images.git_hub.png}" HeightRequest="163" WidthRequest="208" Clicked="Button_Clicked" />
+           
+       
+    </StackLayout>
+    
+
 </ContentPage>

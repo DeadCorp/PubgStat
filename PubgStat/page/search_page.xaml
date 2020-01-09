@@ -6,20 +6,61 @@
              mc:Ignorable="d"
              x:Class="PubgStat.page.search_page"
              Title="Search"
-             
+             xmlns:local="clr-namespace:PubgStat;assembly=PubgStat"
              >
-    <ContentPage.Content >
-        <StackLayout >
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Label Text="Write a nickname" Margin="5,0,5,0" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
-            <Entry x:Name="entry_player_name" Margin="10,20,10,0"/>
-                <Button x:Name="search_button" Text="Поиск" Margin="10,0,10,0" WidthRequest="30" HeightRequest="60" BackgroundColor="#455A64" Clicked="search_button_Clicked"/>
-           
-        </StackLayout>
-            <StackLayout>
-                <Picker Title="Pick season (season 5 default)" x:Name="picker" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
 
-                </Picker>
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Search" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="20" TextColor="White" FontAttributes="Bold" />
+            <Image  Source="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="30" Rotation="14"/>
+            <Image  Source="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="30" Rotation="-20"/>
+            <Image  Source="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="30" Rotation="8"/>
+            <Image  Source="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="30" Rotation="30"/>
+            <Image  Source="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="30" Rotation="15"/>
+            
+         
+        </StackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Content  >
+        <StackLayout  BackgroundColor="Moccasin">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                
+                <StackLayout Padding="0,0,-60,0">
+                    <Image Source="{local:ImageResource PubgStat.images.Weapon.Handgun.Item_Weapon_DesertEagle_C.png}" RotationX="180" Rotation="150" HeightRequest="80" WidthRequest="80"/>
+                </StackLayout>
+                
+                <StackLayout Padding="0,-20,0,0">
+                    <Image Source="{local:ImageResource PubgStat.images.Logos.PUBG_Logo_Color.png}" HeightRequest="180" WidthRequest="300"  />
+                </StackLayout>
+                
+                <StackLayout Padding="-60,0,0,0" >
+                    <Image Source="{local:ImageResource PubgStat.images.Weapon.Handgun.Item_Weapon_DesertEagle_C.png}"  Rotation="-32"  HeightRequest="80" WidthRequest="80"/>
+                </StackLayout>
+                
+            </StackLayout>
+            
+            <StackLayout  Orientation="Horizontal">
+                <Image Source="{local:ImageResource PubgStat.images.Equipment.Headgear.lvl3.png}" HeightRequest="70" WidthRequest="70" Margin="10,0,0,0" RotationY="180"/>
+                <Label Text="Write a nickname" Margin="0,16,0,0" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+                <Image Source="{local:ImageResource PubgStat.images.Equipment.Headgear.lvl3.png}" HeightRequest="70" WidthRequest="70" Margin="0,0,10,0"/>
+            </StackLayout>
+            
+            <StackLayout >
+               
+                <Entry x:Name="entry_player_name" Margin="10,20,10,0"  ClearButtonVisibility="WhileEditing"  />
+                <Button x:Name="search_button" Text="Поиск" TextColor="White" Margin="10,0,10,0" WidthRequest="30" HeightRequest="60" BackgroundColor="#455A64" Clicked="search_button_Clicked" />
+
+            </StackLayout>
+            <StackLayout >
+                <Picker Title="Pick season " x:Name="picker" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  WidthRequest="90"  />
+
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="-78,-15,0,0">
+                <Image Source="{local:ImageResource PubgStat.images.Weapon.Main.Item_Weapon_AK47_C.png}" RotationY="180" />
+                
+                <Image Source="{local:ImageResource PubgStat.images.Weapon.Main.Item_Weapon_AK47_C.png}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

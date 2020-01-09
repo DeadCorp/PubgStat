@@ -64,7 +64,7 @@ namespace PubgStat.page {
 
                
             }
-
+            picker.SelectedIndex = 4;
             season_ids = list["Season 5"];
             picker.SelectedIndexChanged += (sender,args) =>
             {

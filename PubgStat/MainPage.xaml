@@ -11,25 +11,26 @@
              Visual="Material"
              FlyoutBehavior="Disabled"
              Title="PubgStat"
+             xmlns:local="clr-namespace:PubgStat;assembly=PubgStat"
              xmlns:localv="clr-namespace:PubgStat"
              BackgroundColor="#455A64"
              ForegroundColor="White"
              TitleColor="White"
              DisabledColor="#B4FFFFFF"
              UnselectedColor="#95FFFFFF">
-       
     
     <ShellItem>
 
 
-        <Tab Title="Search">
+
+        <Tab Title="Search" Icon="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}">
             <ShellContent >
 
                 <views:search_page />
 
             </ShellContent>
         </Tab>
-        <Tab Title="Seasons" Shell.NavBarIsVisible="False"  >
+        <Tab Title="Seasons" Shell.NavBarIsVisible="False"  Icon="{local:ImageResource PubgStat.images.PEL.FaZe_Clan.png}">
 
             <ShellContent Title="Solo" Route="season_solo"  >
 
@@ -54,7 +55,7 @@
 
         </Tab>
 
-        <Tab Title="LifeTime" Shell.NavBarIsVisible="False">
+        <Tab Title="LifeTime" Shell.NavBarIsVisible="False" Icon="{local:ImageResource PubgStat.images.PEL.G2_Esports.png}">
             <ShellContent Title="Life Solo" >
 
                 <views_life:lifetime_page_solo/>
@@ -77,10 +78,14 @@
 
         </Tab>
 
-        <Tab Title="About">
+        <Tab Title="About" Icon="{local:ImageResource PubgStat.images.PEL.Digital_Athletics.png}">
+            
+
             <ShellContent >
+                
                 <views:about_page />
             </ShellContent>
+            
         </Tab>
     </ShellItem>
 

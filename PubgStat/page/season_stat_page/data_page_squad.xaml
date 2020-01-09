@@ -22,6 +22,7 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+    <ScrollView>
     <Grid BackgroundColor="SandyBrown" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"  />
@@ -238,4 +239,5 @@
 
 
     </Grid>
+    </ScrollView>
 </ContentPage>
