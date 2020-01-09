@@ -4,7 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+              xmlns:local ="clr-namespace:PubgStat;assembly=PubgStat"
              x:Class="PubgStat.page.lifetime_stat_page.lifetime_page_duo">
+    
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="a" TargetType="Label" >
@@ -19,8 +21,8 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ScrollView>
-        <Grid BackgroundColor="SandyBrown" >
+    
+        <Grid BackgroundColor="#455A64" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"  />
                 <ColumnDefinition Width="*" />
@@ -32,7 +34,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="10,10,0,0" BackgroundColor="Coral">
+            <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="10,10,0,0" BackgroundColor="Moccasin">
 
                 <ScrollView>
 
@@ -68,7 +70,7 @@
 
 
             </Frame>
-            <Frame Grid.Column="0" Grid.Row="1" Padding="0" Margin="10,0,0,0" BackgroundColor="Coral">
+            <Frame Grid.Column="0" Grid.Row="1" Padding="0" Margin="10,0,0,0" BackgroundColor="Moccasin">
 
 
 
@@ -116,7 +118,7 @@
 
 
             </Frame>
-            <Frame Grid.Column="0" Grid.Row="2" Padding="0" Margin="10,0,0,5" BackgroundColor="Coral">
+            <Frame Grid.Column="0" Grid.Row="2" Padding="0" Margin="10,0,0,5" BackgroundColor="Moccasin">
 
                 <ScrollView>
 
@@ -146,7 +148,7 @@
 
             </Frame>
 
-            <Frame Grid.Column="1" Grid.Row="0" Padding="0" Margin="2,10,15,5" Grid.RowSpan="3" BackgroundColor="Coral">
+            <Frame Grid.Column="1" Grid.Row="0" Padding="0" Margin="2,10,15,5" Grid.RowSpan="2" BackgroundColor="Moccasin">
 
 
                 <StackLayout Padding="10" >
@@ -225,9 +227,11 @@
             </Frame>
 
 
+        <ImageButton Grid.Column="1" Grid.Row="2" Padding="0" Margin="2,0,15,5"  BackgroundColor="#455A64" Source="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}" Rotation="0" >
+
+        </ImageButton>
 
 
-
-        </Grid>
-    </ScrollView>
+    </Grid>
+    
 </ContentPage>

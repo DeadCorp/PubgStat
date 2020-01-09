@@ -7,9 +7,6 @@
              x:Class="PubgStat.page.about_page"
              xmlns:local="clr-namespace:PubgStat;assembly=PubgStat"
              Title="About"
-             
-             BackgroundImageSource="{local:ImageResource PubgStat.images.MapSelection.Erangel.png}"
-             
              >
 
 
@@ -23,15 +20,15 @@
         </StackLayout>
     </Shell.TitleView>
 
+    <StackLayout BackgroundColor="Moccasin">
 
-
-    <StackLayout Margin="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+    <StackLayout Margin="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Moccasin">
         
             
                 <Button  ImageSource="{local:ImageResource PubgStat.images.git_hub.png}" HeightRequest="163" WidthRequest="208" Clicked="Button_Clicked" />
            
        
     </StackLayout>
-    
+    </StackLayout>
 
 </ContentPage>

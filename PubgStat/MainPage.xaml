@@ -13,19 +13,19 @@
              Title="PubgStat"
              xmlns:local="clr-namespace:PubgStat;assembly=PubgStat"
              xmlns:localv="clr-namespace:PubgStat"
-             BackgroundColor="#455A64"
+             BackgroundColor="#455A74"
              ForegroundColor="White"
              TitleColor="White"
              DisabledColor="#B4FFFFFF"
              UnselectedColor="#95FFFFFF">
     
-    <ShellItem>
+    <ShellItem  >
 
 
 
         <Tab Title="Search" Icon="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}">
             <ShellContent >
-
+                
                 <views:search_page />
 
             </ShellContent>
