@@ -15,20 +15,131 @@
 
     <Shell.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="About" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="20" TextColor="White" FontAttributes="Bold" />
-            <Image  Source="{local:ImageResource PubgStat.images.Icons.Killfeed.Zombie_Punch.png}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+            <Image  Source="{local:ImageResource PubgStat.images.Icons.Killfeed.Zombie_Punch.png}" RotationY="180" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+            <Label Text="About" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="White" FontAttributes="Bold" />
+            <Image  Source="{local:ImageResource PubgStat.images.Icons.Killfeed.Zombie_Punch.png}" VerticalOptions="CenterAndExpand" Margin="0,0,10,0" HorizontalOptions="EndAndExpand"/>
         </StackLayout>
     </Shell.TitleView>
 
-    <StackLayout BackgroundColor="Moccasin">
+    
+        <Grid Padding="10"  BackgroundColor="Moccasin" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-    <StackLayout Margin="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Moccasin">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+        <Grid.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+            <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+        </Grid.GestureRecognizers>
+
+
+
+
+        <Frame HasShadow="False" Grid.Column="0" Grid.Row="0" Padding="0" BackgroundColor="Moccasin" Margin="0,10,0,10">
+            <Button Text="Technology stack links" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" BackgroundColor="Moccasin"/>
+
+        </Frame>
+
+        <Frame HasShadow="False" Grid.Column="0" Grid.Row="1" Padding="0" BackgroundColor="Moccasin"  >
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="0" Grid.Row="0"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_1" Source="{local:ImageResource PubgStat.images.logo_link.jpg}"/>
+                </Frame>
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="0" Grid.Row="1"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_2" Source="{local:ImageResource PubgStat.images.json-api-logo.png}"/>
+                </Frame>
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="0" Grid.Row="2"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_3" Source="{local:ImageResource PubgStat.images.habr_ru.png}"/>
+                </Frame>
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="1" Grid.Row="0"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_4" Source="{local:ImageResource PubgStat.images.git_hub.png}"/>
+                </Frame>
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="1" Grid.Row="1"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_5" Source="{local:ImageResource PubgStat.images.jwt.png}"/>
+                </Frame>
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="1" Grid.Row="2"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_6" Source="{local:ImageResource PubgStat.images.HTTP_logo.png}"/>
+                </Frame>
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="2" Grid.Row="0"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_7" Source="{local:ImageResource PubgStat.images.cc.png}"/>
+                </Frame>
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="2" Grid.Row="1"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_8" Source="{local:ImageResource PubgStat.images.xamar.png}"/>
+                </Frame>
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="2" Grid.Row="2"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_9" Source="{local:ImageResource PubgStat.images.metanit.jpg}"/>
+                </Frame>
+
+
+            </Grid>
+        </Frame>
+
+
+        <Frame HasShadow="False" Grid.Column="0" Grid.Row="2" Padding="0" BackgroundColor="Moccasin" Margin="0,20,0,0">
+            <Button Text="Other links" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" BackgroundColor="Moccasin"/>
+
+        </Frame>
+
+
+        <Frame HasShadow="False" Grid.Column="0" Grid.Row="3" Padding="0,0,0,45" BackgroundColor="Moccasin" Margin="0,20,0,15"  >
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="0" Grid.Row="0"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked" Source="{local:ImageResource PubgStat.images.git_hub.png}"/>
+                </Frame>
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="1" Grid.Row="0"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_10" Source="{local:ImageResource PubgStat.images.cstu.png}"/>
+                </Frame>
+
+
+                <Frame  Padding="0" BackgroundColor="Moccasin" Grid.Column="2" Grid.Row="0"  >
+                    <ImageButton  Aspect="Fill" Clicked="Button_Clicked_11" Source="{local:ImageResource PubgStat.images.inst.jpg}"/>
+                </Frame>
+            </Grid>
+
+        </Frame>
+
+       
+        </Grid>
+
+    <!--<StackLayout Margin="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Moccasin">
         
             
                 <Button  ImageSource="{local:ImageResource PubgStat.images.git_hub.png}" HeightRequest="163" WidthRequest="208" Clicked="Button_Clicked" />
            
        
-    </StackLayout>
-    </StackLayout>
+    </StackLayout>-->
+    
 
 </ContentPage>

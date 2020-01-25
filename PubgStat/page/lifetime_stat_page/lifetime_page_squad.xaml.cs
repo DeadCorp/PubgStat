@@ -18,6 +18,17 @@ namespace PubgStat.page.lifetime_stat_page {
                 this.BindingContext = arg;
             });
         }
+        async void OnSwiped(object sender,SwipedEventArgs e) {
+            switch(e.Direction) {
+                case SwipeDirection.Left:
+                await Shell.Current.GoToAsync("//l_st");
+                break;
+                case SwipeDirection.Right:
+                await Shell.Current.GoToAsync("//l_d");
+                break;
+
+            }
+        }
     }
     
 }

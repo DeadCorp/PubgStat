@@ -23,7 +23,7 @@
 
 
 
-        <Tab Title="Search" Icon="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}">
+        <Tab Title="Search" Icon="{local:ImageResource PubgStat.images.Icons.CarePackage.CarePackage_Flying.png}"  Route="s">
             <ShellContent >
                 
                 <views:search_page />
@@ -32,23 +32,23 @@
         </Tab>
         <Tab Title="Seasons" Shell.NavBarIsVisible="False"  Icon="{local:ImageResource PubgStat.images.PEL.FaZe_Clan.png}">
 
-            <ShellContent Title="Solo" Route="season_solo"  >
-
-                <views_season:data_page_solo/>
+            <ShellContent Title="Solo" Route="s_s"  >
+                
+                <views_season:data_page_solo />
             </ShellContent>
-            <ShellContent Title="Duo" Route="season_duo" >
+            <ShellContent Title="Duo" Route="s_d" >
                 <views_season:data_page_duo/>
             </ShellContent>
-            <ShellContent Title="Squad">
+            <ShellContent Title="Squad" Route="s_sq">
                 <views_season:data_page_squad/>
             </ShellContent>
-            <ShellContent Title="Solo TPP" >
+            <ShellContent Title="Solo TPP" Route="s_st">
                 <views_season:data_page_solo_tpp/>
             </ShellContent>
-            <ShellContent Title="Duo TPP">
+            <ShellContent Title="Duo TPP" Route="s_dt">
                 <views_season:data_page_duo_tpp/>
             </ShellContent>
-            <ShellContent Title="Squad TPP">
+            <ShellContent Title="Squad TPP" Route="s_sqt">
                 <views_season:data_page_squad_tpp/>
             </ShellContent>
 
@@ -56,29 +56,29 @@
         </Tab>
 
         <Tab Title="LifeTime" Shell.NavBarIsVisible="False" Icon="{local:ImageResource PubgStat.images.PEL.G2_Esports.png}">
-            <ShellContent Title="Life Solo" >
+            <ShellContent Title="Life Solo" Route="l_s" >
 
                 <views_life:lifetime_page_solo/>
             </ShellContent>
-            <ShellContent Title="Life Duo"  >
+            <ShellContent Title="Life Duo" Route="l_d" >
                 <views_life:lifetime_page_duo/>
             </ShellContent>
-            <ShellContent Title="Life Squad">
+            <ShellContent Title="Life Squad" Route="l_sq">
                 <views_life:lifetime_page_squad/>
             </ShellContent>
-            <ShellContent Title="Life Solo TPP" >
+            <ShellContent Title="Life Solo TPP" Route="l_st" >
                 <views_life:lifetime_page_solo_tpp/>
             </ShellContent>
-            <ShellContent Title="Life Duo TPP">
+            <ShellContent Title="Life Duo TPP" Route="l_dt">
                 <views_life:lifetime_page_duo_tpp/>
             </ShellContent>
-            <ShellContent Title="Life Squad TPP">
+            <ShellContent Title="Life Squad TPP" Route="l_sqt">
                 <views_life:lifetime_page_squad_tpp/>
             </ShellContent>
 
         </Tab>
 
-        <Tab Title="About" Icon="{local:ImageResource PubgStat.images.PEL.Digital_Athletics.png}">
+        <Tab Title="About" Icon="{local:ImageResource PubgStat.images.PEL.Digital_Athletics.png}" Route="a">
             
 
             <ShellContent >

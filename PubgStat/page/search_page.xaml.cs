@@ -19,27 +19,44 @@ namespace PubgStat.page {
         static string Name;
         private string player_id;
         private string season_ids;
+
+        #region
+        /// <summary>
+        /// season stat view model
+        /// </summary>
+
+
         public static data_page_view_model solo_fpp_vm =  new data_page_view_model();
         public static data_page_view_model solo_tpp_vm =  new data_page_view_model();
         public static data_page_view_model duo_fpp_vm =  new data_page_view_model();
         public static data_page_view_model duo_tpp_vm =  new data_page_view_model();
         public static data_page_view_model squad_fpp_vm =  new data_page_view_model();
         public static data_page_view_model squad_tpp_vm =  new data_page_view_model();
+        #endregion
 
+        #region 
+        /// <summary>
+        /// life stat view model
+        /// </summary>
         public static data_page_view_model lsolo_fpp_vm =  new data_page_view_model();
         public static data_page_view_model lsolo_tpp_vm =  new data_page_view_model();
         public static data_page_view_model lduo_fpp_vm =  new data_page_view_model();
         public static data_page_view_model lduo_tpp_vm =  new data_page_view_model();
         public static data_page_view_model lsquad_fpp_vm =  new data_page_view_model();
         public static data_page_view_model lsquad_tpp_vm =  new data_page_view_model();
+        #endregion
 
+        #region
+        /// <summary>
+        /// image
+        /// </summary>
         private Image solo_i = new Image();
         private Image solo_i_t = new Image();
         private Image duo_i = new Image();
         private Image duo_i_t = new Image();
         private Image sq_i = new Image();
         private Image sq_i_t = new Image();
-       
+        #endregion
 
         private bool check_reaspon = true;
 
@@ -56,6 +73,7 @@ namespace PubgStat.page {
                 {"Season 3" , "division.bro.official.pc-2018-03" },
                 {"Season 4" , "division.bro.official.pc-2018-04" },
                 {"Season 5" , "division.bro.official.pc-2018-05" },
+                {"Season 6" , "division.bro.official.pc-2018-06" },
 
             };
 
@@ -64,12 +82,12 @@ namespace PubgStat.page {
 
                
             }
-            picker.SelectedIndex = 4;
-            season_ids = list["Season 5"];
+            picker.SelectedIndex = 5;
+            season_ids = list["Season 6"];
             picker.SelectedIndexChanged += (sender,args) =>
             {
                 if(picker.SelectedIndex == -1) {
-                    season_ids = list["Season 5"];
+                    season_ids = list["Season 6"];
                 }
                 else {
                     season_ids =  list[picker.Items[picker.SelectedIndex]];
@@ -85,7 +103,18 @@ namespace PubgStat.page {
 
         }
 
-       
+        async void OnSwiped(object sender,SwipedEventArgs e) {
+            switch(e.Direction) {
+
+                case SwipeDirection.Left:
+                await Shell.Current.GoToAsync("//s_s");
+                break;
+                case SwipeDirection.Right:
+                //await Shell.Current.GoToAsync("//s_dt");
+                break;
+
+            }
+        }
 
         private async  void search_button_Clicked(object sender,EventArgs e) {
             Timer timer = new Timer();
@@ -96,7 +125,7 @@ namespace PubgStat.page {
                 Name = entry_player_name.Text;
                 await take_data();
                 if(check_reaspon)
-                    await Shell.Current.GoToAsync("//season_solo");
+                    await Shell.Current.GoToAsync("//s_s");
                 
 
             }

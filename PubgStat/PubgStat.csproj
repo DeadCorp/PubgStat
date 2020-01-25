@@ -17,17 +17,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="images\439px-Microsoft_logo.svg.png" />
+    <None Remove="images\cc.png" />
+    <None Remove="images\cstu.png" />
     <None Remove="images\git_hub.png" />
+    <None Remove="images\habr_ru.png" />
+    <None Remove="images\HTTP_logo.png" />
     <None Remove="images\Icons\CarePackage\CarePackage_Flying.png" />
     <None Remove="images\Icons\Killfeed\Zombie_Punch.png" />
+    <None Remove="images\inst.jpg" />
+    <None Remove="images\json-api-logo.png" />
+    <None Remove="images\jwt.png" />
     <None Remove="images\Logos\PUBG_Logo_Color_4.png" />
+    <None Remove="images\logo_link.jpg" />
     <None Remove="images\lvl.png" />
+    <None Remove="images\metanit.jpg" />
     <None Remove="images\PEL\Digital_Athletics.png" />
     <None Remove="images\PEL\FaZe_Clan.png" />
     <None Remove="images\PEL\G2_Esports.png" />
     <None Remove="images\Weapon\Handgun\Item_Weapon_DesertEagle_C.png" />
     <None Remove="images\Weapon\Main\Item_Weapon_AK47_C.png" />
     <None Remove="images\Weapon\Melee\Item_Weapon_Pan_C.png" />
+    <None Remove="images\xamar.png" />
     <None Remove="Ranks\Beginner_01.png" />
     <None Remove="Ranks\Beginner_02.png" />
     <None Remove="Ranks\Beginner_03.png" />
@@ -68,16 +79,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="images\439px-Microsoft_logo.svg.png" />
+    <EmbeddedResource Include="images\cc.png" />
+    <EmbeddedResource Include="images\cstu.png" />
     <EmbeddedResource Include="images\git_hub.png" />
+    <EmbeddedResource Include="images\habr_ru.png" />
+    <EmbeddedResource Include="images\HTTP_logo.png" />
     <EmbeddedResource Include="images\Icons\CarePackage\CarePackage_Flying.png" />
     <EmbeddedResource Include="images\Icons\Killfeed\Zombie_Punch.png" />
+    <EmbeddedResource Include="images\inst.jpg" />
+    <EmbeddedResource Include="images\json-api-logo.png" />
+    <EmbeddedResource Include="images\jwt.png" />
     <EmbeddedResource Include="images\Logos\PUBG_Logo_Color_4.png" />
+    <EmbeddedResource Include="images\logo_link.jpg" />
+    <EmbeddedResource Include="images\metanit.jpg" />
     <EmbeddedResource Include="images\PEL\Digital_Athletics.png" />
     <EmbeddedResource Include="images\PEL\FaZe_Clan.png" />
     <EmbeddedResource Include="images\PEL\G2_Esports.png" />
     <EmbeddedResource Include="images\Weapon\Handgun\Item_Weapon_DesertEagle_C.png" />
     <EmbeddedResource Include="images\Weapon\Main\Item_Weapon_AK47_C.png" />
     <EmbeddedResource Include="images\Weapon\Melee\Item_Weapon_Pan_C.png" />
+    <EmbeddedResource Include="images\xamar.png" />
     <EmbeddedResource Include="Ranks\Beginner_01.png" />
     <EmbeddedResource Include="Ranks\Beginner_02.png" />
     <EmbeddedResource Include="Ranks\Beginner_03.png" />

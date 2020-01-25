@@ -24,9 +24,19 @@ namespace PubgStat.page.season_stat_page {
                 this.BindingContext = arg;
             });
         }
-        
+        async void OnSwiped(object sender,SwipedEventArgs e) {
+            switch(e.Direction) {
+                case SwipeDirection.Left:
+                await Shell.Current.GoToAsync("//s_sq");
+                break;
+                case SwipeDirection.Right:
+                await Shell.Current.GoToAsync("//s_s");
+                break;
+
+            }
+        }
 
 
-     
+
     }
 }

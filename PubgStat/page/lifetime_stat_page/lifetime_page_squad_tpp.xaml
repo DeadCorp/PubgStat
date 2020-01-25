@@ -33,6 +33,14 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+
+        <Grid.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+            <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+        </Grid.GestureRecognizers>
+
+
+
         <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="10,10,0,0" BackgroundColor="Moccasin">
 
             <ScrollView>

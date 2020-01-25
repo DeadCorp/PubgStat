@@ -24,6 +24,15 @@
 
     <ContentPage.Content  >
         <StackLayout  BackgroundColor="Moccasin">
+
+
+            <StackLayout.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+            </StackLayout.GestureRecognizers>
+
+
+
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 
                
@@ -49,7 +58,7 @@
             <StackLayout >
                
                 <Entry x:Name="entry_player_name" Margin="10,20,10,0"  ClearButtonVisibility="WhileEditing"  />
-                <Button x:Name="search_button" Text="Поиск" TextColor="White" Margin="10,0,10,0" WidthRequest="30" HeightRequest="60" BackgroundColor="#455A74" Clicked="search_button_Clicked" />
+                <Button x:Name="search_button" Text="Search" TextColor="White" Margin="10,0,10,0" WidthRequest="30" HeightRequest="60" BackgroundColor="#455A74" Clicked="search_button_Clicked" />
 
             </StackLayout>
             <StackLayout >
